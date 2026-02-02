@@ -1,0 +1,23 @@
+{
+  "name": "learn-backend-node",
+  "version": "1.0.0",
+  "description": "HanhDeptrai_Backend-nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doanxhanh05-hue/learn_Back-End_-NodeJS-.git"
+  },
+  "author": "Hanhdeptrai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doanxhanh05-hue/learn_Back-End_-NodeJS-/issues"
+  },
+  "homepage": "https://github.com/doanxhanh05-hue/learn_Back-End_-NodeJS-#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
