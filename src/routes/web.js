@@ -3,7 +3,6 @@ const { getHomepage, getABC, getHanhdeptrai } = require('../controllers/homeCont
 const router = express.Router()
 //khai báo route
 router.get('/', getHomepage)
-
 router.get('/abc', getABC)
 router.get('/hahdeptrai', getHanhdeptrai)
 
