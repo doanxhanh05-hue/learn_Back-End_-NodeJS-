@@ -9,5 +9,8 @@ const getABC = (req, res) => {
 const getHanhdeptrai = (req, res) => {
     res.render('sample.ejs')
 }
+const postCreateUser = (req, res) => {
+    res.send('create a new user')
+}
 
-module.exports = { getHomepage, getABC, getHanhdeptrai }
+module.exports = { getHomepage, getABC, getHanhdeptrai, postCreateUser }
