@@ -13,6 +13,8 @@ const hostname = process.env.HOST_NAME
 //config template engine
 configViewEngine(app)
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 //khai báo route
 app.use('/', webRoutes)
