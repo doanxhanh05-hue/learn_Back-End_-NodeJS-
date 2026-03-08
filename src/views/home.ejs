@@ -43,45 +43,46 @@
         <a href="/create">Create Users</a>
     </div>
     <div class="table-container">
-        <%= JSON.stringify(listUsers) %>
-            <div class="title">
-                List User
-            </div>
-            <table>
+        <div class="title">
+            List User
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>name</th>
+                <th>CIty</th>
+                <th>Action</th>
+            </tr>
+
+            // Source - https://stackoverflow.com/a/38371978
+            // Posted by SUNDARRAJAN K
+            // Retrieved 2026-03-08, License - CC BY-SA 3.0
+
+            <% listUsers.forEach(function(user) { %>
                 <tr>
-                    <th>ID</th>
-                    <th>Email</th>
-                    <th>name</th>
-                    <th>CIty</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>Peter</td>
-                    <td>Griffin</td>
-                    <td>$100</td>
-                    <td>$100</td>
+                    <td>
+                        <%= user.id %>
+                    </td>
+                    <td>
+                        <%= user.email %>
+                    </td>
+                    <td>
+                        <%= user.name %>
+                    </td>
+                    <td>
+                        <%= user.city %>
+                    </td>
                     <td>
                         <button>edit</button>
                         <button>delete</button>
                     </td>
 
                 </tr>
-                <tr>
-                    <td>Lois</td>
-                    <td>Griffin</td>
-                    <td>$150</td>
-                </tr>
-                <tr>
-                    <td>Joe</td>
-                    <td>Swanson</td>
-                    <td>$300</td>
-                </tr>
-                <tr>
-                    <td>Cleveland</td>
-                    <td>Brown</td>
-                    <td>$250</td>
-                </tr>
-            </table>
+                <% }); %>
+
+
+        </table>
     </div>
 
 </body>
