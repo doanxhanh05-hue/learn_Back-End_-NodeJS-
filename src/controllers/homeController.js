@@ -4,6 +4,9 @@ const getHomepage = async (req, res) => {
     let results = await getAllUser();
     return res.render('home.ejs', { listUsers: results })
 }
+const getUpdatePage = (req, res) => {
+    res.render('edit.ejs')
+}
 const getABC = (req, res) => {
     res.send("this is ABC page")
 }
@@ -21,7 +24,7 @@ const postCreateUser = async (req, res) => {
 
     let [results, fields] = await connection.query(
         `INSERT INTO Users (email, name, city) 
-        VALUES (?, ?, ?)`,
+            VALUES (?, ?, ?)`,
         [email, name, city]
     );
     res.send("create success")
@@ -41,4 +44,4 @@ const getCreatePage = (req, res) => {
     res.render('create.ejs')
 }
 
-module.exports = { getHomepage, getABC, getHanhdeptrai, postCreateUser, getCreatePage }
+module.exports = { getUpdatePage, getHomepage, getABC, getHanhdeptrai, postCreateUser, getCreatePage }
